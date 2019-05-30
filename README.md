@@ -8,5 +8,5 @@ A flask application is built to render the data to an html page.
 Repository contains a Jupyter notebook with Web scraping code, a flask app file in python and corresponding html file.
 
 ![Screenshot-1](/blob/master/snapshot1.PNG)
-![Screenshot-2](snapshot2.png)
-![Screenshot-3](snapshot3.png)
+![Screenshot-2](/snapshot2.PNG)
+![Screenshot-3](snapshot3.PNG)
