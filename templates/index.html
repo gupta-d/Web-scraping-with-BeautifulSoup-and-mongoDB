@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Mission to Mars</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="static/style.css">
+
+</head>
+
+
+
+<body>
+
+  <div class="container">
+
+
+
+    <div class="jumbotron">
+
+      <h1>Mission to Mars</h1>
+
+      <p>
+
+        <a class="btn btn-primary btn-lg" href="http://127.0.0.1:5000/scrapper" role="button">Refresh page for current update</a>
+
+      </p>
+
+
+
+    </div>
+  </div>
+
+    <div class="container-fluid">
+
+      <div class="row">
+
+        <div class="col-md-12">
+
+          <h2>Latest Mars news from NASA.</h2>
+
+          <h4>{{my_scrape.news_title}}</h4>
+
+          
+
+          <p> {{my_scrape.news_p}} </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="container-fluid">
+
+      <div class="row">
+
+        <div class="col-md-4" >
+
+          <h2>Featured Mars Image.</h2>
+
+          <img src="{{my_scrape.featured_image_url}}" , style="width:400px;height:400px, alt="Mars featured image" />
+
+        </div>
+
+
+
+        <div class="col-md-4">
+          <div>
+            <h3>Current weather on Mars</h3>
+
+              <p>
+
+                {{my_scrape.mars_weather}}
+
+              </p>
+          </div>
+              
+              <div>
+                <h3>Mars facts</h3>
+              {{my_scrape.html_table | safe}}
+              </div>
+        </div>
+
+      </div>
+
+    </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+
+            
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+
+
+    
+
+    <div class="container-fluid">
+
+
+
+      <div class="jumbotron">
+
+        <h1>Mars Hemispheres</h1>
+
+
+
+        <div class="row">
+
+          <div class="col-md-4">
+
+            <img src="{{my_scrape.img_list[0]['img_url']}}" alt="Mars Hemisphere1" style="width:300px;height:300px;border:0;">
+
+            <h3>{{my_scrape.img_list[0]['img_title']}}</h3>
+
+          </div>
+
+          <div class="col-md-4">
+
+            <img src="{{my_scrape.img_list[1]['img_url']}}" alt="Mars Hemisphere2" style="width:300px;height:300px;border:0;">
+
+            <h3>{{my_scrape.img_list[1]['img_title']}}</h3>
+
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-4">
+
+            <img src="{{my_scrape.img_list[2]['img_url']}}" alt="Mars Hemisphere3" style="width:300px;height:300px;border:0;">
+
+            <h3>{{my_scrape.img_list[2]['img_title']}}</h3>
+
+          </div>
+
+          <div class="col-md-4">
+
+            <img src="{{my_scrape.img_list[3]['img_url']}}" alt="Mars Hemisphere4" style="width:300px;height:300px;border:0;">
+
+            <h3>{{my_scrape.img_list[3]['img_title']}}</h3>
+
+          </div>
+
+        </div>
+
+
+    </div>
+
+  </div>
+
+ 
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+
+    crossorigin="anonymous">
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>
